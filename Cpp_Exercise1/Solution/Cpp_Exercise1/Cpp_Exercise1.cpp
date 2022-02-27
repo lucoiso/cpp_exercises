@@ -14,7 +14,8 @@ concept IsStr = requires (T)
 };
 
 // Filter alphabetic characters from string
-template<typename T> requires IsStr<T>
+template<typename T> 
+requires IsStr<T> // C++20 Requires -> Will check if IsStr concept is applicable
 constexpr void FilterAlphabetic(T& InStr)
 {
 	erase_if(InStr, [](const char ch) -> bool
@@ -32,7 +33,7 @@ constexpr void FilterAlphabetic(T& InStr)
 constexpr char VowelsRef[5]{ 'a', 'e', 'i', 'o', 'u' };
 
 template <typename T> 
-requires IsStr<T>
+requires IsStr<T> // C++20 Requires -> Will check if IsStr concept is applicable
 constexpr vector<pair<size_t, char>> FindVowelsInStr(const T InVal)
 {
 	vector<pair<size_t, char>> Output;
