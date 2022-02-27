@@ -7,7 +7,7 @@
 
 using namespace std;
 
-template <typename T>
+template <typename T> // C++20 Concept -> Check if T is convertible to char array
 concept IsStr = requires (T)
 {
 	convertible_to<T, const char[]>;
@@ -29,7 +29,7 @@ constexpr void FilterAlphabetic(T& InStr)
 }
 
 // Hide and seek: find each vowel in a string
-constexpr char VowelsRef[]{ 'a', 'e', 'i', 'o', 'u' };
+constexpr char VowelsRef[5]{ 'a', 'e', 'i', 'o', 'u' };
 
 template <typename T> 
 requires IsStr<T>
