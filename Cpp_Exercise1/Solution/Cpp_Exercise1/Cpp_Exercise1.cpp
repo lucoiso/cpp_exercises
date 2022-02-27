@@ -78,7 +78,7 @@ int main()
 		FilterAlphabetic(Input);
 		cout << endl << "Filtered string: " << Input << endl;
 
-		// Asynchronous function with a future handler
+		// Asynchronous function with a future handler - not necessary, just as an example
 		future<vector<pair<size_t, char>>> AsyncTask = async(launch::async, FindVowelsInStr<string>, Input);
 		const auto FoundIndexes = AsyncTask.get();
 
