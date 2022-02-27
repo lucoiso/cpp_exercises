@@ -1,7 +1,6 @@
-1. Create a C++ program that will receive one typed word and filter to only output alphabetic values.
-
+1. Create a C++ program that will receive a string and filter to only output alphabetic values.
 2. Count and show every vowel indexes in the filtered string.
-
 3. Create a loop to enable the user to repeat the process.
+
 
 There's a finished example inside the Solution folder, that's using templates and concepts from C++20, future/async, lambda function and container STL function to manage these requirements.
